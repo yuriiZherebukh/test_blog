@@ -1,3 +1,8 @@
+"""
+This module contains serializer class for Custom User model
+"""
+
+from typing import Union
 from rest_framework import serializers
 
 from authentication.models import CustomUser
@@ -17,14 +22,21 @@ class CustomUserSerializer(serializers.ModelSerializer):
         model = CustomUser
         fields = ('id', 'username', 'email', 'password', 'confirm_password')
 
-    def create(self, validated_data):
+    def create(self, validated_data: dict) -> 'CustomUser':
+        """
+        Create Custom User
+
+        :param validated_data: Dictionary with required fields for Custom User
+        :return: :class:`.CustomUser` object
+        """
         return CustomUser.create(**validated_data)
 
-    def validate(self, data: dict):
+    def validate(self, data: dict) -> Union[dict, bool]:
         """
-        Check if User Account password is equal as password confirm
+        Check if CustomUser password is equal as password confirm
+
         :param data:
-        :return: User Account data, otherwise False
+        :return: Custom User data, otherwise False
         """
         if data['password']:
             if data['password'] != data['confirm_password']:

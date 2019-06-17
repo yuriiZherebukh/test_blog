@@ -1,3 +1,7 @@
+"""
+URL Routes to home page
+"""
+
 from django.conf.urls import url
 
 from .views import index

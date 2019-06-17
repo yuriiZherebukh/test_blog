@@ -1,10 +1,18 @@
+"""
+Module contains serializer for News model
+"""
+
 from rest_framework import serializers
 
-from news.models import News
 from authentication.serializers import CustomUserSerializer
+from news.models import News
 
 
 class NewsSerializer(serializers.ModelSerializer):
+    """
+    Serializes News model
+    """
+
     author = CustomUserSerializer(read_only=True)
 
     class Meta:
