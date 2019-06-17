@@ -1,6 +1,6 @@
 var request = $.ajax({
    type: "GET",
-   url: "http://127.0.0.1:8080/api/news/"
+   url: "/api/news/"
 }).done(function(){
     if (request.status == 200){
          var html = '';

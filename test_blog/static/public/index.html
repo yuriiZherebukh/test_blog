@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-
+    {% load staticfiles %}
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -12,10 +12,10 @@
     <title>Test Blog</title>
 
     <!-- Bootstrap Core CSS -->
-    <link href="static/public/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="{% static 'public/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
 
     <!-- Theme CSS -->
-    <link href="static/public/css/clean-blog.min.css" rel="stylesheet">
+    <link href="{% static 'public/css/clean-blog.min.css' %}" rel="stylesheet">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -24,10 +24,10 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
     <!-- jQuery -->
-    <script src="static/public/vendor/jquery/jquery.min.js"></script>
+    <script src="{% static 'public/vendor/jquery/jquery.min.js' %}"></script>
 
     <!-- Bootstrap Core JavaScript -->
-    <script src="static/public/vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="{% static 'public/vendor/bootstrap/js/bootstrap.min.js' %}"></script>
     <!-- Theme JavaScript -->
 
 </head>
@@ -93,7 +93,7 @@
     </footer>
 
 
-<script src="static/public/js/allPosts.js"></script>
+<script src="{% static 'public/js/allPosts.js' %}"></script>
 </body>
 
 </html>
