@@ -74,6 +74,8 @@ sudo /etc/init.d/nginx start
 
 sudo ln -s ~/path/to/test_blog/test_blog/test_blog_nginx.conf /etc/nginx/sites-enabled/
 ```
+- Change root paths to _test_blog_nginx.conf_ regarding _test_blog_ project path
+
 Collect static files on the project nad restart _nginx_ server:
 ```python
 python3 manage.py collectstatic
